@@ -4,7 +4,7 @@ import org.scalameter.api._
 
 import MapToMap._
 
-class ArrayBenchmark extends PerformanceTest.Quickbenchmark {
+class ArrayMapToMapBenchmark extends PerformanceTest.Quickbenchmark {
   val sizes: Gen[Int] = Gen.range("size")(300000, 700000, 100000)
   val arrays: Gen[Array[Int]] = for (size <- sizes) yield Array.fill(size)(0)
 
@@ -27,7 +27,7 @@ class ArrayBenchmark extends PerformanceTest.Quickbenchmark {
   }
 }
 
-class ListBenchmark extends PerformanceTest.Quickbenchmark {
+class ListMapToMapBenchmark extends PerformanceTest.Quickbenchmark {
   val sizes: Gen[Int] = Gen.range("size")(300000, 700000, 100000)
   val lists: Gen[List[Int]] = for (size <- sizes) yield List.fill(size)(0)
 
@@ -50,7 +50,7 @@ class ListBenchmark extends PerformanceTest.Quickbenchmark {
   }
 }
 
-class VectorBenchmark extends PerformanceTest.Quickbenchmark {
+class VectorMapToMapBenchmark extends PerformanceTest.Quickbenchmark {
   val sizes: Gen[Int] = Gen.range("size")(300000, 700000, 100000)
   val vectors: Gen[Vector[Int]] = for (size <- sizes) yield Vector.fill(size)(0)
 
